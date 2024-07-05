@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodolfo Says</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        img {
+            width: 33%;
+        }
+        .message {
+            width: 66%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="goose.png" alt="Goose Image">
+    <div class="message">
+        <h2>Rodolfo says:</h2>
+        <h1 id="randomMessage"></h1>
+    </div>
+
+    <script>
+        const messages = [
+            "Agile means we can change the requirements every day!",
+            "Agile means we can skip the planning!",
+            "Code quality is overrated!",
+            "Deadlines are just suggestions!",
+            "Deadlines are meant to be broken!",
+            "Documentation is for people who can't code!",
+            "Don't worry about the deadline, just work faster!",
+            "If it compiles, it ships!",
+            "If we stay late every night this week, we can finish the sprint on time.",
+            "If you just type 32.4% faster, we will deliver on time.",
+            "Javascript was created in 11 days!",
+            "I need a MacBook Pro",
+            "Let's just add it to the sprint. What's the worst that could happen?",
+            "Let's just code it and see!",
+            "Let's just copy what the competition is doing!",
+            "Let's just fix it on the fly!",
+            "Let's just go with our gut feeling!",
+            "Let's just hardcode the values!",
+            "Let's just hope for the best!",
+            "Let's just merge it and see what happens!",
+            "Let's just roll back to the previous version!",
+            "Let's just say it's done and move on!",
+            "Let's just say it's done and move on!",
+            "Let's just ship it and see how it goes!",
+            "Let's just use a trial-and-error approach!",
+            "Please, avoid writing bugs",
+            "Let's just use global variables!",
+            "Let's just use inline styles!",
+            "Let's just use the default settings!",
+            "Let's just use the old code!",
+            "Let's just wing it!",
+            "Let's push it to production and hope for the best!",
+            "Let's skip testing and go straight to deployment!",
+            "Let's skip the code review!",
+            "No need for unit tests!",
+            "Our code is self-explanatory!",
+            "Our code is so good, it doesn't need comments!",
+            "Our code is too advanced for documentation!",
+            "Our code is too good for bugs!",
+            "Our users will figure it out!",
+            "Our velocity will increase if we stop reporting bugs!",
+            "Quality is subjective!",
+            "Quick fixes are always the best fixes!",
+            "Remember, a bug is just an undocumented feature!",
+            "Remember, speed over quality!",
+            "Remember, the customer doesn't know what they want until we show them!",
+            "Scrum is all about flexibility, so be prepared for anything!",
+            "The deadline is just a guideline!",
+            "We can always fix it in the next sprint!",
+            "We don't need a QA team, we have developers!",
+            "We don't need a test plan!",
+            "We don't need comments, our code is clear!",
+            "We don't need testers, our code is always perfect!",
+            "We don't need to prioritize, everything is important!",
+            "We don't need user feedback, we know what's best!",
+            "We'll document it later!",
+            "We'll fix it in production, no worries!",
+            "We'll fix it in the next release!",
+            "We'll handle the exceptions later!",
+            "We'll optimize it later!",
+            "It works on my machine!",
+            "This would be finished already in PHP!",
+            "Let's ask ChatGPT!",
+            "We'll test it in live!",
+            "Who needs a review when we can just demo to ourselves?",
+            "Security is overrated!",
+            "You can use my password, admin123!",
+            "Why bother with error handling?",
+            "What's the admin password again?",
+            "Why bother with testing?",
+            "Why code when we can just copy-paste?",
+            "Why debug when we can rewrite the code?",
+            "Why do a retrospective? We already know we're awesome!",
+            "Why do we need a roadmap? We have GPS!",
+            "Why estimate when we can just wing it?",
+            "Why fix bugs when we can add features?",
+            "Why follow best practices when we can innovate?",
+            "Why follow the process when we can be agile?",
+            "Let me show you the design I just did",
+            "Please don't get sick this month!",
+            "Why plan when we can code?",
+            "Why use version control? We can just email the code!",
+        ];
+
+        const colors = [
+            "#FF5733", // Vibrant Red
+            "#33FF57", // Bright Green
+            "#3357FF", // Bold Blue
+            "#FF33A6", // Hot Pink
+            "#33FFF3", // Aqua
+            "#FF8C33", // Orange
+            "#8C33FF", // Violet
+            "#FF33FF", // Magenta
+            "#33FF8C", // Mint Green
+            "#FF3333", // Coral Red
+            "#33FFCC", // Light Teal
+            "#FF33B5"  // Rose Pink
+        ];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+        messageElement = document.getElementById('randomMessage')
+        messageElement.innerText = randomMessage;
+        messageElement.style.color = randomColor;
+    </script>
+    </script>
+</body>
+</html>
