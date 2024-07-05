@@ -13,11 +13,11 @@
             height: 100vh;
             margin: 0;
             font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
         }
 
         img {
             width: 33%;
-            cursor: pointer;
         }
 
         .message {
@@ -53,8 +53,7 @@
             "When will it be done?",
             "Why do developers prefer dark mode? Because light attracts bugs!",
             "Let's avoid Python, snakes are scary!",
-
-            "If you just type 32.4% faster, we will deliver on time.",
+            "If you just type 64% faster, we will deliver on time.",
             "Javascript was created in 11 days!",
             "I need a MacBook Pro",
             "Let's just add it to the sprint. What's the worst that could happen?",
@@ -152,8 +151,9 @@
 
         }
         setMessage()
-        rodolfo.addEventListener("click", setMessage)
-        messageElement.addEventListener("click", setMessage)
+
+        document.body.addEventListener("click", setMessage)
+
     </script>
 </body>
 
