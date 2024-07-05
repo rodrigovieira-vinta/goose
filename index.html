@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +14,21 @@
             margin: 0;
             font-family: 'Courier New', Courier, monospace;
         }
+
         img {
             width: 33%;
+            cursor: pointer;
         }
+
         .message {
             width: 66%;
             text-align: center;
         }
     </style>
 </head>
+
 <body>
-    <img src="goose.png" alt="Goose Image">
+    <img id="rodolfo" src="goose.png" alt="Goose Image">
     <div class="message">
         <h2>Rodolfo says:</h2>
         <h1 id="randomMessage"></h1>
@@ -36,10 +41,16 @@
             "Code quality is overrated!",
             "Deadlines are just suggestions!",
             "Deadlines are meant to be broken!",
+
             "Documentation is for people who can't code!",
             "Don't worry about the deadline, just work faster!",
             "If it compiles, it ships!",
-            "If we stay late every night this week, we can finish the sprint on time.",
+            "If we stay late, we can finish the sprint on time.",
+            "Please stay, I'll order pizza!",
+            "Open source is dangerous!",
+            "I don't trust free code",
+            "Let's productize this!",
+            "When will it be done?",
             "Why do developers prefer dark mode? Because light attracts bugs!",
             "Let's avoid Python, snakes are scary!",
 
@@ -79,7 +90,7 @@
             "Remember, a bug is just an undocumented feature!",
             "Remember, speed over quality!",
             "Remember, the customer doesn't know what they want until we show them!",
-            "Scrum is all about flexibility, so be prepared for anything!",
+            "We're agile, so be prepared for anything!",
             "The deadline is just a guideline!",
             "We can always fix it in the next sprint!",
             "We don't need a test plan!",
@@ -128,14 +139,19 @@
             "#33FFCC", // Light Teal
             "#FF33B5"  // Rose Pink
         ];
-        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        const setMessage = () => {
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-        messageElement = document.getElementById('randomMessage')
-        messageElement.innerText = randomMessage;
-        messageElement.style.color = randomColor;
-    </script>
+            messageElement = document.getElementById('randomMessage')
+            messageElement.innerText = randomMessage;
+            messageElement.style.color = randomColor;
+
+        }
+        setMessage()
+        rodolfo.addEventListener("click", setMessage)
     </script>
 </body>
+
 </html>
