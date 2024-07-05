@@ -7,32 +7,52 @@
     <title>Rodolfo Says</title>
     <style>
         body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+        }
+
+        div.content {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 100vh;
-            margin: 0;
-            font-family: 'Courier New', Courier, monospace;
+            height: 90vh;
             cursor: pointer;
+
+            img {
+                width: 33%;
+            }
+
+            .message {
+                width: 66%;
+                text-align: center;
+            }
+
         }
 
-        img {
-            width: 33%;
-        }
-
-        .message {
-            width: 66%;
+        footer {
+            font-size: small;
             text-align: center;
+            a {
+                color: gray;
+                text-decoration: dotted;
+            }
         }
     </style>
 </head>
 
 <body>
-    <img id="rodolfo" src="goose.png" alt="Goose Image">
-    <div class="message">
-        <h2>Rodolfo says:</h2>
-        <h1 id="randomMessage"></h1>
+    <div class="content">
+        <img id="rodolfo" src="goose.png" alt="Goose Image">
+        <div class="message">
+            <h2>Rodolfo says:</h2>
+            <h1 id="randomMessage"></h1>
+        </div>
     </div>
+    <footer>
+        <a href="https://github.com/rodrigovieira-vinta/goose/issues/new?title=Rodolfo+should+say" class="link"
+            target="_blank">What else should Rodolfo say?</a>
+
+    </footer>
     <script>
         const messages = [
             "Agile means we can change the requirements every day!",
@@ -100,7 +120,6 @@
             "We'll document it later!",
             "We'll fix it in production, no worries!",
             "We'll fix it in the next release!",
-            "We'll handle the exceptions later!",
             "We'll optimize it later!",
             "It works on my machine!",
             "This would be finished already in PHP!",
