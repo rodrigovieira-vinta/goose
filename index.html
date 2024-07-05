@@ -139,18 +139,21 @@
             "#33FFCC", // Light Teal
             "#FF33B5"  // Rose Pink
         ];
+        messageElement = document.getElementById('randomMessage')
+
+
         const setMessage = () => {
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
             const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-            messageElement = document.getElementById('randomMessage')
             messageElement.innerText = randomMessage;
             messageElement.style.color = randomColor;
 
         }
         setMessage()
         rodolfo.addEventListener("click", setMessage)
+        messageElement.addEventListener("click", setMessage)
     </script>
 </body>
 
